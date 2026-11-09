@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 260px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #212121;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 12px;
+      color: #616161;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    button#runBtn {
+      width: 100%;
+      padding: 9px 0;
+      background: #1565c0;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    button#runBtn:hover  { background: #0d47a1; }
+    button#runBtn:active { background: #0a3880; }
+    button#runBtn:disabled {
+      background: #90a4ae;
+      cursor: not-allowed;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #555;
+      min-height: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h3>Sensibull Uncheck Helper</h3>
+  <p>Clicks "Add to group", reads which strikes are already in another group, dismisses the dialog, then unchecks those strikes on the page.</p>
+  <button id="runBtn">Run</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
